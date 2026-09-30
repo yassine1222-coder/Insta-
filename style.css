@@ -1,0 +1,90 @@
+/* هادشي كيتحكم فالصفحة كاملة */
+body {
+    font-family: Arial, sans-serif; /* نوع الخط */
+    display: flex;
+    justify-content: center; /* كيجيب داكشي للوسط */
+    background-color: white;
+    margin-top: 50px;
+}
+
+/* هادي هي الكرطونة لي جمعنا فيها كلشي */
+.container {
+    width: 320px; /* نفس قياس شاشة التليفون لي درتي فـ Figma */
+    text-align: center;
+}
+
+/* الديكور ديال اللوغو */
+.logo {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* الديكور ديال بطونة فيسبوك */
+.btn-fb {
+    width: 100%;
+    background-color: #1877F2;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* الديكور ديال كلمة OR */
+.or-divider {
+    color: #8e8e8e;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* الديكور ديال الخانات */
+input {
+    width: 100%;
+    box-sizing: border-box; /* باش ميفوتوش العبار ديال الشاشة */
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #DBDBDB; /* إطار رمادي */
+    background-color: #FAFAFA; /* لون الخانة من لداخل */
+    border-radius: 5px; /* جناب دايرين */
+}
+
+/* الديكور ديال نسيت كلمة السر */
+.forgot {
+    display: block;
+    text-align: right; /* باش تمشي لليمن */
+    font-size: 12px;
+    color: #00376b;
+    text-decoration: none; /* كتحيد داك السطر لي تحت الرابط */
+    margin-bottom: 20px;
+}
+
+/* الديكور ديال بطونة Log In */
+.btn-login {
+    width: 100%;
+    background-color: #B2DFFC; /* زرق باهت حيت مازال ماكتبنا والو */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* الديكور ديال التسجيل لتحت */
+.signup {
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.signup a {
+    color: #0095F6;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* هاد الديكور كيخدم غير ملي الخانات كيعمرو */
+.btn-login.active {
+    background-color: #0095F6; /* زرق ناصح د انستغرام */
+    cursor: pointer; /* السهم كيولي على شكل يد ملي كتدوز عليه */
+}
