@@ -1,39 +1,46 @@
-/* خلفية سوداء كحلة بالكامل بحال التطبيق الحقيقي */
+/* الأساسيات وخلفية سوداء/رمادية غامقة مطابقة تماماً للتصويرة */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #000000;
+    background-color: #121212;
     margin: 0;
-    color: #ffffff;
+    color: #f5f5f5;
 }
 
-/* الكرطونة فوسط الشاشة */
+/* الكرطونة العامة */
 .container {
-    width: 320px;
-    text-align: center;
+    width: 100%;
+    max-width: 350px;
     padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 /* اختيار اللغات لفوق */
 .lang-selector {
     font-size: 13px;
     color: #a8a8a8;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    cursor: pointer;
 }
 
-/* اللوغو بالابيض */
+.lang-selector span {
+    font-size: 10px;
+}
+
+/* اللوغو الكلاسيكي باللون الأبيض */
 .logo {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 300;
-    margin-bottom: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    margin-bottom: 25px;
     letter-spacing: -1px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* بطونة فيسبوك الزرقاء الكلاسيكية */
+/* بطونة فيسبوك الزرقاء */
 .btn-fb {
     width: 100%;
     background-color: #0095f6;
@@ -45,18 +52,22 @@ body {
     font-size: 14px;
     margin-bottom: 18px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
-/* كلمة OR فالوسط مع خطوط */
+/* فاصل OR مع خطوط جانبية أو كتابة واضحة */
 .or-divider {
     color: #a8a8a8;
-    margin: 15px 0 20px 0;
+    margin: 15px 0 18px 0;
     font-size: 13px;
     font-weight: 600;
-    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* الخانات بلون رمادي غامق واطار خفيف */
+/* خانات الإدخال (رمادي غامق مطابق للتصويرة) */
 input {
     width: 100%;
     box-sizing: border-box;
@@ -78,21 +89,20 @@ input:focus {
     border-color: #a8a8a8;
 }
 
-/* نسيت كلمة السر لليمن بلون ازرق فاتح */
+/* زر نسيت كلمة السر */
 .forgot {
     display: block;
     text-align: right;
     font-size: 12px;
     color: #00376b;
     text-decoration: none;
-    margin: 8px 0 20px 0;
+    margin: 6px 0 18px 0;
 }
 
-/* بطونة تسجيل الدخول فالحالة العادية */
+/* بطونة Log In فالوضع العادي (زرقاء باهتة مطابقة للتصويرة) */
 .btn-login {
     width: 100%;
-    background-color: #0095f6;
-    opacity: 0.7;
+    background-color: #b2dffc;
     color: white;
     border: none;
     padding: 12px;
@@ -101,23 +111,38 @@ input:focus {
     font-size: 14px;
     margin-bottom: 20px;
     cursor: not-allowed;
+    transition: background-color 0.2s ease;
 }
 
-/* بطونة تسجيل الدخول فاش كتعمر الخانات (تولي زرقاء واضحة) */
+/* بطونة Log In فاش كتعمر الخانات (تولي زرقاء انستغرام صافية) */
 .btn-login.active {
-    opacity: 1;
     background-color: #0095f6;
     cursor: pointer;
 }
 
-/* الكتابة التحتانية والتسجيل */
+/* التسجيل فالتحت */
 .signup {
     font-size: 14px;
     color: #a8a8a8;
+    margin-top: 10px;
 }
 
 .signup a {
-    color: #0095F6;
+    color: #0095f6;
     font-weight: 600;
     text-decoration: none;
+}
+
+/* نظام تفاعلي حسب الجهاز (Responsive: PC vs Mobile) */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: #000000;
+    }
+    .container {
+        background-color: #000000;
+        border: 1px solid #262626;
+        border-radius: 1px;
+        padding: 40px;
+        width: 350px;
+    }
 }
